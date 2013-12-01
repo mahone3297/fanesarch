@@ -8,43 +8,50 @@
 </head>
 <body>
 
-<header>
-  <%= image_tag('logo.png') %>
+<header class="row">
+  <div class="col-md-2">
+    <%= image_tag('logo.png') %>
+  </div>
+  <div class="col-md-10">
+  </div>
 </header>
-<nav style="float:left;">
-  <ul>
-    <li>设计项目</li>
-      <ul>
-        <li><%= link_to '居住地产', '/shejixiangmu/juzhudichan' %></li>
-        <li><%= link_to '综合商业', '/shejixiangmu/zongheshangye' %></li>
-        <li><%= link_to '酒店度假', '/shejixiangmu/jiudiandujia' %></li>
-        <li><%= link_to '办公研发', '/shejixiangmu/bangongyanfa' %></li>
-        <li><%= link_to '展示会所', '/shejixiangmu/zhanshihuisuo' %></li>
-        <li><%= link_to '教育科研', '/shejixiangmu/jiaoyukeyan' %></li>
-        <li><%= link_to '工业建筑', '/shejixiangmu/gongyejianzhu' %></li>
-        <li><%= link_to '室内设计', '/shejixiangmu/shineisheji' %></li>
-        <li><%= link_to '景观设计', '/shejixiangmu/jingguansheji' %></li>
-      </ul>
 
-    <li>设计研究</li>
-      <ul>
-        <li>家具及产品</li>
-        <li>研究论文</li>
-        <li>建筑画</li>
-      </ul>
+<div class="row">
+  <nav class="col-md-2">
+    <ul>
+      <li>设计项目</li>
+        <ul>
+          <li><%= link_to '居住地产', '/shejixiangmu/juzhudichan' %></li>
+          <li><%= link_to '综合商业', '/shejixiangmu/zongheshangye' %></li>
+          <li><%= link_to '酒店度假', '/shejixiangmu/jiudiandujia' %></li>
+          <li><%= link_to '办公研发', '/shejixiangmu/bangongyanfa' %></li>
+          <li><%= link_to '展示会所', '/shejixiangmu/zhanshihuisuo' %></li>
+          <li><%= link_to '教育科研', '/shejixiangmu/jiaoyukeyan' %></li>
+          <li><%= link_to '工业建筑', '/shejixiangmu/gongyejianzhu' %></li>
+          <li><%= link_to '室内设计', '/shejixiangmu/shineisheji' %></li>
+          <li><%= link_to '景观设计', '/shejixiangmu/jingguansheji' %></li>
+        </ul>
 
-    <li>关于我们</li>
-      <ul>
-        <li>公司简介</li>
-        <li>设计团队</li>
-        <li>光合田园</li>
-      </ul>
+      <li>设计研究</li>
+        <ul>
+          <li>家具及产品</li>
+          <li>研究论文</li>
+          <li>建筑画</li>
+        </ul>
 
-    <li>联系我们</li>
-  </ul>
-</nav>
-<div style="float:left;">
-<%= yield %>
+      <li>关于我们</li>
+        <ul>
+          <li>公司简介</li>
+          <li>设计团队</li>
+          <li>光合田园</li>
+        </ul>
+
+      <li>联系我们</li>
+    </ul>
+  </nav>
+  <div class="col-md-10">
+  <%= yield %>
+  </div>
 </div>
 
 </body>
