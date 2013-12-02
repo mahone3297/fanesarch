@@ -1,4 +1,9 @@
 class ShejixiangmuController < ApplicationController
+  # 首页
+  def index
+    render :layout => false
+  end
+
   # 居住地产
   def juzhudichan
   end
