@@ -9,6 +9,7 @@ Fanesarch::Application.routes.draw do
   get "shejixiangmu/shineisheji"
   get "shejixiangmu/jingguansheji"
   get "guanyuwomen/gongsijianjie"
+  get "guanyuwomen/guanghetianyuan"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
