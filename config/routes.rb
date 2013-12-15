@@ -8,6 +8,7 @@ Fanesarch::Application.routes.draw do
   get "shejixiangmu/gongyejianzhu"
   get "shejixiangmu/shineisheji"
   get "shejixiangmu/jingguansheji"
+  get "shejiyanjiu/jiajujichanpin"
   get "guanyuwomen/gongsijianjie"
   get "guanyuwomen/guanghetianyuan"
   get "lianxiwomen/index"
