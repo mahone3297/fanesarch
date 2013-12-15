@@ -1,0 +1,12 @@
+<% @num_array.each do |idx| %>
+  <% if idx % 3 == 1 %>
+    <div class="row">
+  <% end %>
+  <%= image_tag action_name + '/' + idx.to_s + '.jpg', class: 'col-md-3' %>
+  <% if idx % 3 == 0 %>
+    </div>
+  <% end %>
+<% end %>
+<% if @num_array.length % 3 != 0 %>
+  </div>
+<% end %>
