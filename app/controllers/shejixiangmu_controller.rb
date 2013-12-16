@@ -4,6 +4,10 @@ class ShejixiangmuController < ApplicationController
     render :layout => false
   end
 
+  # 次首页
+  def vice_index
+  end
+
   # 居住地产
   def juzhudichan
     @num_array = (1..17).to_a

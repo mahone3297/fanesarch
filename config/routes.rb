@@ -1,4 +1,6 @@
 Fanesarch::Application.routes.draw do
+  get "shejixiangmu/index"
+  get "shejixiangmu/vice_index"
   get "shejixiangmu/juzhudichan"
   get "shejixiangmu/zongheshangye"
   get "shejixiangmu/jiudiandujia"
