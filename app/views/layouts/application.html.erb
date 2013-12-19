@@ -2,25 +2,42 @@
 <html>
 <head>
   <title>梵石建筑</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
+  <style>
+    body,form,h1,h2,h3,h4,div,span,p{margin:0px;padding:0px;}
+    body ul,body li{list-style: none;padding:0px; margin:0px;font-family: "Microsoft YaHei",Verdana, Arial, Helvetica, sans-serif;}
+    a:link,a:visited{color:#000;text-decoration:none;}
+    .content{margin:0 auto;width:1000px;height:700px; overflow:hiddden; text-align:left; list-style: none;}
+    .topLogo {
+      margin-left: 58px;
+      margin-top: 40px;
+    }
+    .col-md-2{float:left; margin-left: 70px;width:200px;}
+    .menu_first{ cursor:pointer;padding:5px 0px; margin-bottom:10px; text-align:center;font-size:13px; width:180px; background:#ddd;}
+    .muen_second{ margin:10px 0px;display:none;}
+    .muen_second li{cursor:pointer;padding:8px 0px;text-align:center;font-size:12px; width:180px; }
+    .col-md-10{float:left; margin-left: 70px;width:650px;word-wrap:break-word; font-size:12px; line-height:24px;}
+ </style>
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+ <script>
+ $(function(){
+   $(".menu_first").click(function(){
+      $('.muen_second').hide(500);
+      $(this).next().show(500);
+    });
+   });
+   </script>
 </head>
 <body>
-
-<header class="row">
-  <div class="col-md-2">
-    <%= image_tag('logo.png') %>
-  </div>
-  <div class="col-md-10">
-  </div>
+<div class="content">
+<header class="topLogo">
+    <%= link_to image_tag('logo.png'), '/' %>
 </header>
 
 <div class="row">
   <nav class="col-md-2">
     <ul>
-      <li>设计项目</li>
-        <ul>
+      <li class="menu_first">设计项目</li>
+        <ul class="muen_second">
           <li><%= link_to '居住地产', '/shejixiangmu/juzhudichan' %></li>
           <li><%= link_to '综合商业', '/shejixiangmu/zongheshangye' %></li>
           <li><%= link_to '酒店度假', '/shejixiangmu/jiudiandujia' %></li>
@@ -32,27 +49,27 @@
           <li><%= link_to '景观设计', '/shejixiangmu/jingguansheji' %></li>
         </ul>
 
-      <li>设计研究</li>
-        <ul>
+      <li class="menu_first">设计研究</li>
+        <ul class="muen_second">
           <li><%= link_to '家具及产品', '/shejiyanjiu/jiajujichanpin' %></li>
           <li><%= link_to '研究论文', '/shejiyanjiu/yanjiulunwen' %></li>
           <li><%= link_to '建筑画', '/shejiyanjiu/jianzhuhua' %></li>
         </ul>
 
-      <li>关于我们</li>
-        <ul>
+      <li class="menu_first">关于我们</li>
+        <ul class="muen_second">
           <li><%= link_to '公司简介', '/guanyuwomen/gongsijianjie' %></li>
           <li><%= link_to '设计团队', '/guanyuwomen/shejituandui' %></li>
           <li><%= link_to '光合田园', '/guanyuwomen/guanghetianyuan' %></li>
         </ul>
 
-      <li><%= link_to '联系我们', '/lianxiwomen/index' %></li>
+      <li class="menu_first"><%= link_to '联系我们', '/lianxiwomen/index' %></li>
     </ul>
   </nav>
   <div class="col-md-10">
   <%= yield %>
   </div>
 </div>
-
+</div>
 </body>
 </html>

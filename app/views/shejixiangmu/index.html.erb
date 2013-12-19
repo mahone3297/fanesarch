@@ -5,6 +5,8 @@
       <title>梵石建筑</title>
       <style>
          a:link,a:visited{color:#000;text-decoration:none;}
+         .content{background: url(/assets/index_backgroud.png) no-repeat ; margin:0 auto;width:1280px;height:700px; overflow:hiddden; text-align:left;}
+         .message{padding:130px 0px 0px 380px;font-weight:bold; font-size:18px;line-height:36px;letter-spacing:3px;}
       </style>
       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
       <script>
@@ -24,12 +26,12 @@
           });     
       </script>
   </head>
-  <body style="background: url(/assets/index_backgroud.png) no-repeat ; margin:0 auto;width:1280px;height:700px; overflow:hiddden; text-align:left;">
+  <body >
     <div class="content" >
     <div style="padding:30px 200px">
-      <img alt="Logo" src="/assets/logo.png">
+      <%=link_to image_tag('/assets/logo.png'), '/'%>
     </div>  
-      <div style="padding:140px 0px 0px 380px;font-weight:bold; font-size:18px;line-height:36px;letter-spacing:3px;">
+      <div class="message">
         <a href="/shejixiangmu/vice_index">
           <span id="enter" style="display:none;">
           梵石/FANES，古英语意译“神殿、宗教建筑”
