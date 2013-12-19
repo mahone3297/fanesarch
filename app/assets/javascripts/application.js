@@ -13,6 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require bootstrap.min
+//= require bootstrap/bootstrap.min
 //= require shejixiangmu
 // require_tree .
