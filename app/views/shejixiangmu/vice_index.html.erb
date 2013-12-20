@@ -1,4 +1,15 @@
-<pre>
-vice index
-accordion pic
-</pre>
+<script>
+  $(function (){
+    $('#slides').slidesjs({
+      width: 650,
+      height: 430
+    });
+  });
+</script>
+
+<div id="slides">
+  <%= image_tag 'slides/1.jpg' %>
+  <%= image_tag 'slides/2.jpg' %>
+  <%= image_tag 'slides/3.jpg' %>
+  <%= image_tag 'slides/4.jpg' %>
+</div>
