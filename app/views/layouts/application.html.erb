@@ -16,62 +16,60 @@
     }
     .col-md-2{float:left; margin-left: 70px;width:200px;}
     .menu_first{ cursor:pointer;padding:5px 0px; margin-bottom:10px; text-align:center;font-size:13px; width:180px; background:#ddd;}
-    .muen_second{ margin:10px 0px;display:none;}
-    .muen_second li{cursor:pointer;padding:8px 0px;text-align:center;font-size:12px; width:180px; }
+    .menu_second{ margin:10px 0px;display:none;}
+    .menu_second li{cursor:pointer;padding:8px 0px;text-align:center;font-size:12px; width:180px; }
     .col-md-10{float:left; margin-left: 70px;width:650px;word-wrap:break-word; font-size:12px; line-height:24px;}
- </style>
- <script>
- $(function(){
-   $(".menu_first").click(function(){
-      $('.muen_second').hide(500);
+  </style>
+  <script>
+  $(function(){
+    $(".menu_first").click(function(){
+      $('.menu_second').hide(500);
       $(this).next().show(500);
     });
-   });
-   </script>
+  });
+  </script>
 </head>
 <body>
 <div class="content">
-<header class="topLogo">
+  <header class="topLogo">
     <%= link_to image_tag('logo.png'), '/' %>
-</header>
+  </header>
 
-<div class="row">
-  <nav class="col-md-2">
-    <ul>
-      <li class="menu_first">设计项目</li>
-        <ul class="muen_second">
-          <li><%= link_to '居住地产', '/shejixiangmu/juzhudichan' %></li>
-          <li><%= link_to '综合商业', '/shejixiangmu/zongheshangye' %></li>
-          <li><%= link_to '酒店度假', '/shejixiangmu/jiudiandujia' %></li>
-          <li><%= link_to '办公研发', '/shejixiangmu/bangongyanfa' %></li>
-          <li><%= link_to '展示会所', '/shejixiangmu/zhanshihuisuo' %></li>
-          <li><%= link_to '教育科研', '/shejixiangmu/jiaoyukeyan' %></li>
-          <li><%= link_to '工业建筑', '/shejixiangmu/gongyejianzhu' %></li>
-          <li><%= link_to '室内设计', '/shejixiangmu/shineisheji' %></li>
-          <li><%= link_to '景观设计', '/shejixiangmu/jingguansheji' %></li>
-        </ul>
+  <div class="row">
+    <nav class="col-md-2">
+      <ul>
+        <li class="menu_first">设计项目</li>
+          <ul class="menu_second">
+            <li><%= link_to '居住地产', '/shejixiangmu/juzhudichan' %></li>
+            <li><%= link_to '综合商业', '/shejixiangmu/zongheshangye' %></li>
+            <li><%= link_to '酒店度假', '/shejixiangmu/jiudiandujia' %></li>
+            <li><%= link_to '办公研发', '/shejixiangmu/bangongyanfa' %></li>
+            <li><%= link_to '展示会所', '/shejixiangmu/zhanshihuisuo' %></li>
+            <li><%= link_to '教育科研', '/shejixiangmu/jiaoyukeyan' %></li>
+            <li><%= link_to '工业建筑', '/shejixiangmu/gongyejianzhu' %></li>
+            <li><%= link_to '室内设计', '/shejixiangmu/shineisheji' %></li>
+            <li><%= link_to '景观设计', '/shejixiangmu/jingguansheji' %></li>
+          </ul>
 
-      <li class="menu_first">设计研究</li>
-        <ul class="muen_second">
-          <li><%= link_to '家具及产品', '/shejiyanjiu/jiajujichanpin' %></li>
-          <li><%= link_to '研究论文', '/shejiyanjiu/yanjiulunwen' %></li>
-          <li><%= link_to '建筑画', '/shejiyanjiu/jianzhuhua' %></li>
-        </ul>
+        <li class="menu_first">设计研究</li>
+          <ul class="menu_second">
+            <li><%= link_to '家具及产品', '/shejiyanjiu/jiajujichanpin' %></li>
+            <li><%= link_to '研究论文', '/shejiyanjiu/yanjiulunwen' %></li>
+            <li><%= link_to '建筑画', '/shejiyanjiu/jianzhuhua' %></li>
+          </ul>
 
-      <li class="menu_first">关于我们</li>
-        <ul class="muen_second">
-          <li><%= link_to '公司简介', '/guanyuwomen/gongsijianjie' %></li>
-          <li><%= link_to '设计团队', '/guanyuwomen/shejituandui' %></li>
-          <li><%= link_to '光合田园', '/guanyuwomen/guanghetianyuan' %></li>
-        </ul>
+        <li class="menu_first">关于我们</li>
+          <ul class="menu_second">
+            <li><%= link_to '公司简介', '/guanyuwomen/gongsijianjie' %></li>
+            <li><%= link_to '设计团队', '/guanyuwomen/shejituandui' %></li>
+            <li><%= link_to '光合田园', '/guanyuwomen/guanghetianyuan' %></li>
+          </ul>
 
-      <li class="menu_first"><%= link_to '联系我们', '/lianxiwomen/index' %></li>
-    </ul>
-  </nav>
-  <div class="col-md-10">
-  <%= yield %>
+        <li class="menu_first"><%= link_to '联系我们', '/lianxiwomen/index' %></li>
+      </ul>
+    </nav>
+    <div class="col-md-10"><%= yield %></div>
   </div>
-</div>
 </div>
 </body>
 </html>
