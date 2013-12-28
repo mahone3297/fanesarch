@@ -6,29 +6,33 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
   <style>
-    body,form,h1,h2,h3,h4,div,span,p{margin:0px;padding:0px;}
+    body,form,h1,h2,h3,h4,div,span,p,hr{margin:0px;padding:0px;}
     body ul,body li{list-style: none;padding:0px; margin:0px;font-family: "Microsoft YaHei",Verdana, Arial, Helvetica, sans-serif;}
     a:link,a:visited{color:#000;text-decoration:none;}
     .content{margin:0 auto;width:1000px;height:700px; overflow:hiddden; text-align:left; list-style: none;}
-    .topLogo {
-      margin-left: 58px;
-      margin-top: 40px;
-    }
-    .col-md-2{float:left; margin-left: 70px;width:200px;}
+    .topLogo {margin: 30px 0px 18px 58px; }
     .menu_first{ cursor:pointer;padding:5px 0px; margin-bottom:10px; text-align:center;font-size:13px; width:180px; background:#ddd;}
     .menu_second{ margin:10px 0px;display:none;}
-    .menu_second li{cursor:pointer;padding:8px 0px;text-align:center;font-size:12px; width:180px; }
-    .col-md-10{float:left; margin-left: 70px;width:650px;word-wrap:break-word; font-size:12px; line-height:24px;}
+    .menu_second li{cursor:pointer; padding:8px 0px;text-align:center;font-size:12px; width:180px; }
+    .content_left {margin-left:77px;width:200px;}
+    .content_right{margin-left: 20px;width:630px;word-wrap:break-word; font-size:12px; line-height:24px;}
+    .content_right .row {margin-bottom:30px;}
+    .content_right hr{ margin:2px 0px 18px 0px; color:#aaa; font-weight:bold;border-top:1px solid #aaa;}
+    .slidesjs-pagination{ text-align:right;  float:right}
+    .slidesjs-pagination li{ float:left;}
+    .slidesjs-pagination li a{ display:block;  line-height:45px; width:14px; height:14px;background:#ccc; margin:14px 0px 0px 14px;}
+    .slidesjs-pagination li a.active{background:#000;}
+    .title{ font-size:14px; font-weight:bold;}
   </style>
 </head>
 <body>
 <div class="content">
-  <header class="topLogo">
+  <div class="row topLogo">
     <%= link_to image_tag('logo.png'), '/' %>
-  </header>
+  </div>
 
   <div class="row">
-    <nav class="col-md-2">
+    <div class="col-md-2 content_left">
       <ul>
         <li class="menu_first">设计项目</li>
         <ul class="menu_second">
@@ -59,8 +63,8 @@
 
         <li class="menu_first"><%= link_to '联系我们', '/lianxiwomen/index' %></li>
       </ul>
-    </nav>
-    <div class="col-md-10"><%= yield %></div>
+    </div>
+    <div class="col-md-10 content_right"><%= yield %></div>
   </div>
 </div>
 </body>
