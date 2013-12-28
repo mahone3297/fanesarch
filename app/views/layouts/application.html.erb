@@ -10,23 +10,33 @@
     body ul,body li{list-style: none;padding:0px; margin:0px;font-family: "Microsoft YaHei",Verdana, Arial, Helvetica, sans-serif;}
     a:link,a:visited{color:#000;text-decoration:none;}
     .content{margin:0 auto;width:1000px;height:700px; overflow:hiddden; text-align:left; list-style: none;}
-    .topLogo {margin: 30px 0px 15px 58px; }
-    .content_left {float:left; margin-left:62px;width:200px;}
+    .topLogo {
+      margin-left: 58px;
+      margin-top: 40px;
+    }
+    .col-md-2{float:left; margin-left: 70px;width:200px;}
     .menu_first{ cursor:pointer;padding:5px 0px; margin-bottom:10px; text-align:center;font-size:13px; width:180px; background:#ddd;}
     .menu_second{ margin:10px 0px;display:none;}
-    .menu_second li{cursor:pointer; padding:8px 0px;text-align:center;font-size:12px; width:180px; }
-    .content_right{float:left;margin-left: 20px;width:auto;word-wrap:break-word; font-size:12px; line-height:24px;}
-    .content_right .row {margin-bottom:30px;}
+    .menu_second li{cursor:pointer;padding:8px 0px;text-align:center;font-size:12px; width:180px; }
+    .col-md-10{float:left; margin-left: 70px;width:650px;word-wrap:break-word; font-size:12px; line-height:24px;}
   </style>
-  </head>
+  <script>
+  $(function(){
+    $(".menu_first").click(function(){
+      $('.menu_second').hide(500);
+      $(this).next().show(500);
+    });
+  });
+  </script>
+</head>
 <body>
 <div class="content">
-  <div class="row topLogo">
+  <header class="topLogo">
     <%= link_to image_tag('logo.png'), '/' %>
-  </div>
+  </header>
 
   <div class="row">
-    <div class="col-md-2 content_left">
+    <nav class="col-md-2">
       <ul>
         <li class="menu_first">设计项目</li>
           <ul class="menu_second">
@@ -57,17 +67,9 @@
 
         <li class="menu_first"><%= link_to '联系我们', '/lianxiwomen/index' %></li>
       </ul>
-    </div>
-    <div class="col-md-10 content_right"><%= yield %></div>
+    </nav>
+    <div class="col-md-10"><%= yield %></div>
   </div>
 </div>
-<script>
-  $(function(){
-    $(".menu_first").click(function(){
-      $('.menu_second').hide(500);
-      $(this).next().show(500);
-    });
-  });
-  </script>
 </body>
 </html>
