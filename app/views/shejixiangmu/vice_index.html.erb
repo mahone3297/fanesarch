@@ -1,15 +1,25 @@
-<script>
-  $(function (){
-    $('#slides').slidesjs({
-      width: 650,
-      height: 430
-    });
-  });
-</script>
-
+<style>
+  .slidesjs-pagination{
+    float: right;
+  }
+  .slidesjs-pagination-item {
+    float: left;
+    width: 10px;
+  }
+</style>
 <div id="slides">
   <%= image_tag 'slides/1.jpg' %>
   <%= image_tag 'slides/2.jpg' %>
   <%= image_tag 'slides/3.jpg' %>
   <%= image_tag 'slides/4.jpg' %>
 </div>
+
+<script>
+  $(function (){
+    $('#slides').slidesjs({
+      width: 650,
+      height: 430,
+      navigation: false,
+    });
+  });
+</script>
