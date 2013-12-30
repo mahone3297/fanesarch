@@ -61,4 +61,26 @@ class ShejixiangmuController < ApplicationController
     @num_array = (1..9).to_a
     render 'list'
   end
+
+  # 显示详细页面
+  def detail
+    @category = params[:category]
+    @idx = params[:idx]
+    case @idx
+    when '1'
+      @text =<<EOF
+项目名称 东湖林语（规划、建筑）
+项目规模 占地53360平方米，建筑面积70000平方米
+项目状况 建成
+坐落  湖北武汉东湖路368号
+EOF
+      @num_array = (1..8).to_a
+      @image_path = @category + '/detail/1武汉东湖林语/'
+    else
+      @text = ''
+      @num_array = []
+      @image_path = ''
+    end
+    render 'detail'
+  end
 end

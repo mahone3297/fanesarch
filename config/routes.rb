@@ -10,6 +10,7 @@ Fanesarch::Application.routes.draw do
   get "shejixiangmu/gongyejianzhu"
   get "shejixiangmu/shineisheji"
   get "shejixiangmu/jingguansheji"
+  get "detail/:category/:idx" => 'shejixiangmu#detail'
   get "shejiyanjiu/jiajujichanpin"
   get "shejiyanjiu/yanjiulunwen"
   get "shejiyanjiu/jianzhuhua"
