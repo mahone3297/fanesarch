@@ -18,6 +18,7 @@ Fanesarch::Application.routes.draw do
   get "guanyuwomen/shejituandui"
   get "guanyuwomen/guanghetianyuan"
   get "lianxiwomen/index"
+  get "lianxiwomen/map"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
