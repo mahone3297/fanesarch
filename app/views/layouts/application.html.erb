@@ -79,14 +79,10 @@ $(function(){
   $('.menu_first').click(function(){
       $(this).next().toggle(500);
   });
-  $(".menu_second li").hover(
-      function(){
-            $(this).addClass("hover");
-        },
-      function(){
-            $(this).removeClass("hover");
-        }
-  );
+  $(".menu_second li").hover(function (){
+    $(this).toggleClass('hover');
+  });
+
   $('.title').click(function(){
       $(this).next().next().toggle(500);
   });
