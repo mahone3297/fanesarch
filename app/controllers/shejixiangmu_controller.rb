@@ -207,8 +207,11 @@ class ShejixiangmuController < ApplicationController
 ', 'num_array' => (1..13).to_a, 'image_path' => '/detail/16金华又见康桥/',
       },
       '17' => {
-        'title' => '',
+        'title' => '项目名称 慈溪壹方大厦（建筑）',
         'text' => '
+项目规模 用地面积7706平方米 建筑面积30497平方米
+项目状况 建成
+坐落  浙江宁波慈溪
 ', 'num_array' => (1..19).to_a, 'image_path' => '/detail/17慈溪壹方大厦/',
       },
     },
