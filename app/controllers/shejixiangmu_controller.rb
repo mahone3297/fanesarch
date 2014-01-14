@@ -151,7 +151,7 @@ class ShejixiangmuController < ApplicationController
 ', 'num_array' => (1..8).to_a, 'image_path' => '/detail/9余杭双溪径山园二期/',
       },
       '10' => {
-        'title' => '项目名称 杭州余杭创新基地',
+        'title' => '项目名称 杭州余杭创新基地人才公寓',
         'text' => '
 项目规模 占地51686.8平方米、建筑面积117416.2平方米
 项目状况 在建
@@ -429,7 +429,7 @@ class ShejixiangmuController < ApplicationController
     },
     'bangongyanfa' => {
       '1' => {
-        'title' => '项目名称 壹向大楼（建筑）',
+        'title' => '项目名称 壹向大楼（建筑、室内、设计管理）',
         'text' => '
 项目规模 占地3177平方米，建筑面积13651.5平方米
 项目状况 建成
@@ -469,7 +469,7 @@ class ShejixiangmuController < ApplicationController
 ', 'num_array' => (1..13).to_a, 'image_path' => '/detail/5杭州徐龙国际广场/',
       },
       '6' => {
-        'title' => '项目名称 天益中心（建筑）',
+        'title' => '项目名称 上海天益中心（建筑）',
         'text' => '
 项目规模 占地21397平方米，建筑面积106510平方米
 项目状况 方案
