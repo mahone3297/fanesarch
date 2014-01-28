@@ -2,7 +2,7 @@
   <% if idx % 3 == 1 %>
     <div class="row">
   <% end %>
-  <%= link_to image_tag(action_name + '/' + idx.to_s + '.jpg', class: 'col-md-3'), '/detail/' + action_name + '/' + idx.to_s %>
+  <%= link_to image_tag(IMG_SITE + image_path(action_name + '/' + idx.to_s + '.jpg').sub('/assets', ''), class: 'col-md-3'), '/detail/' + action_name + '/' + idx.to_s %>
   <% if idx % 3 == 0 %>
     </div>
   <% end %>
