@@ -2,5 +2,5 @@
 <hr />
 <div><%= simple_format @text %></div>
 <% @num_array.each do |idx| %>
-  <%= image_tag(IMG_SITE + image_path(@image_path + idx.to_s + '.jpg').sub('/assets', '')) %>
+  <%= image_tag @image_path + idx.to_s + '.jpg' %>
 <% end %>
